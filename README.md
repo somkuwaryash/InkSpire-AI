@@ -130,6 +130,16 @@ This project is in early development. Basic functionality for content generation
 
 This project is in active development. Contributions are welcome, but please note that many features are still evolving.
 
-## License
+## License and Usage
+-----------------
 
-This project is open source and available under the [MIT License](LICENSE).
+© Inkspire-AI. All rights reserved.
+
+This project is made available for educational and non-commercial use only. By accessing this project you agree to the following:
+
+1.  You may view, fork, and learn from this code for personal and educational purposes.
+2.  You may not use any part of this code for commercial purposes.
+3.  You may not distribute, sell, or sublicense any part of this project.
+4.  Any use of this project or its code must give attribution to the original author.
+
+For any other use, including commercial use, please contact the project owner for permission.
