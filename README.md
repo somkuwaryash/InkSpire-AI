@@ -40,7 +40,7 @@ This project is in early development. Basic functionality for content generation
 
    ```
 
-   git clone https://github.com/your-username/inkspire-ai.git
+   git clone https://github.com/somkuwaryash/inkspire-ai.git
 
    cd inkspire-ai
 
