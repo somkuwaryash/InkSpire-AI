@@ -1,7 +1,10 @@
+// src/server.ts
+
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { router as apiRouter } from './routes/api';
+import contentRoutes from './routes/contentRoutes';
 
 dotenv.config();
 
@@ -13,6 +16,7 @@ app.use(express.json());
 
 // API routes
 app.use('/api', apiRouter);
+app.use('/api/content', contentRoutes);
 
 // Health check route
 app.get('/health', (req, res) => {
@@ -22,3 +26,15 @@ app.get('/health', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+import { JwtPayload } from 'jsonwebtoken';
+
+declare global {
+  namespace Express {
+    interface Request {
+      user?: JwtPayload;
+    }
+  }
+}
+
+
