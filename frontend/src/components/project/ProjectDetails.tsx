@@ -5,6 +5,7 @@ import { getProjectById, updateProject } from '@/utils/api';
 import { Project, ContentFile } from '@/models/Project';
 import { ContentType } from '@/types/content';
 import { v4 as uuidv4 } from 'uuid';
+import ExportContent from './ExportContent';
 
 interface ProjectDetailsProps {
   id: string;
@@ -115,8 +116,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ id }) => {
           </div>  
         <div>
           <h4 className="text-md font-medium text-gray-900 mb-2">Content Files</h4>
-          {project.contentFiles.map((file, index) => (
-            <div key={file.id} className="mb-4 p-4 border border-gray-200 rounded-md">
+          // Inside the content files mapping section, add the export component:
+          {editedProject.contentFiles.map((file, index) => (
+            <div key={file.id} className="border rounded-lg p-4 mb-4">
               <input
                 type="text"
                 value={file.name}
@@ -141,6 +143,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ id }) => {
                 rows={5}
                 className="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               />
+              <div className="mt-2 flex justify-end">
+                <ExportContent contentFile={file} />
+              </div>
             </div>
           ))}
           {isEditing && (

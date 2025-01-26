@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { logout } from '@/utils/api';
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { logout } from "@/utils/api";
 
 type LayoutProps = {
   children: React.ReactNode;
   title?: string;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children, title = 'InkSpire-AI' }) => {
+const Layout: React.FC<LayoutProps> = ({ children, title = "InkSpire-AI" }) => {
   const router = useRouter();
 
   const handleLogout = () => {
     logout();
-    router.push('/login');
+    router.push("/login");
   };
 
   return (
@@ -34,10 +34,22 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'InkSpire-AI' }) => {
                 InkSpire-AI
               </Link>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                <Link href="/" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                <Link
+                  href="/"
+                  className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                >
                   Home
                 </Link>
-                <Link href="/projects" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                {/* <Link
+                  href="/seo"
+                  className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                >
+                  SEO
+                </Link> */}
+                <Link
+                  href="/projects"
+                  className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                >
                   Projects
                 </Link>
               </div>
@@ -54,9 +66,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'InkSpire-AI' }) => {
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        {children}
-      </main>
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">{children}</main>
     </div>
   );
 };

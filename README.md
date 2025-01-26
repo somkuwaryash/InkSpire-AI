@@ -1,50 +1,59 @@
 # InkSpire-AI: AI-Driven Content Creation Suite
 
-InkSpire-AI is an open-source tool designed to streamline and enhance the content creation process using AI assistance. It leverages the Hugging Face Inference API to provide features for content generation and analysis.
-
-## Current State
-
-This project is in early development. Basic functionality for content generation and project management has been implemented, but many features are still in progress or planned for future development.
+InkSpire-AI is an open-source tool designed to streamline and enhance the content creation process using AI assistance. It leverages the Hugging Face Inference API to provide intelligent content generation and analysis capabilities.
 
 ## Features
 
-- AI-powered content generation for various types (blog posts, social media, product descriptions, etc.)
-
-- Basic project management system
-
-- User authentication (in progress)
-
-- Content analysis
+- 🤖 AI-powered content generation
+  - Blog posts
+  - Social media content
+  - Product descriptions
+  - Custom content types
+- 📊 Project Management
+  - Create and manage multiple projects
+  - Content versioning
+  - Project status tracking
+  - Bulk operations support
+- 📝 Content Management
+  - Multiple content types support
+  - Content versioning
+  - Export functionality (PDF, Markdown, TXT)
+  - Content analysis
+- 🔐 Authentication System (in progress)
+  - User registration
+  - Login/Logout
+  - JWT-based authentication
 
 ## Tech Stack
 
-- Frontend: Next.js with TypeScript
-
-- Backend: Express.js with TypeScript
-
-- AI Integration: Hugging Face Inference API
-
-- Authentication: JWT (in progress)
+- **Frontend**
+  - Next.js 14
+  - TypeScript
+  - Tailwind CSS
+  - React Hooks
+  
+- **Backend**
+  - Express.js
+  - TypeScript
+  - JWT Authentication
+  
+- **AI Integration**
+  - Hugging Face Inference API
+  - Custom prompt templates
 
 ## Prerequisites
 
 - Node.js (v14 or later)
-
 - npm or yarn
-
 - Hugging Face API account and token
 
 ## Setup
 
-1\. Clone the repository:
-
-   ```
-
-   git clone https://github.com/somkuwaryash/inkspire-ai.git
-
-   cd inkspire-ai
-
-   ```
+1. Clone the repository:
+```bash
+git clone https://github.com/somkuwaryash/inkspire-ai.git
+cd inkspire-ai
+```
 
 2\. Install dependencies:
 
